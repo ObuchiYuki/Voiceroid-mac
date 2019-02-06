@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="Yj8-xL-GGU" customClass="_VCEEnumPropertyCell" customModule="Voiceroid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="181"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Za-YHm">
+                    <rect key="frame" x="2" y="163" width="79" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="wDZ-b2-RUe"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="nfB-TH-973">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39C-N1-iDs">
+                    <rect key="frame" x="82" y="3" width="215" height="175"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="xVE-A1-Zct">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="175"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JbS-ka-Zi8">
+                                <rect key="frame" x="0.0" y="0.0" width="215" height="175"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="215" height="175"/>
+                                <size key="maxSize" width="240" height="10000000"/>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hqc-Y2-CLg">
+                        <rect key="frame" x="199" y="0.0" width="16" height="175"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="x4f-Za-YHm" firstAttribute="leading" secondItem="Yj8-xL-GGU" secondAttribute="leading" constant="4" id="9M8-CH-gaf"/>
+                <constraint firstAttribute="bottom" secondItem="39C-N1-iDs" secondAttribute="bottom" constant="3" id="NGf-Sy-4dH"/>
+                <constraint firstItem="39C-N1-iDs" firstAttribute="top" secondItem="Yj8-xL-GGU" secondAttribute="top" constant="3" id="dsU-xJ-qfV"/>
+                <constraint firstItem="x4f-Za-YHm" firstAttribute="top" secondItem="Yj8-xL-GGU" secondAttribute="top" constant="4" id="gY9-j5-xH1"/>
+                <constraint firstItem="39C-N1-iDs" firstAttribute="leading" secondItem="x4f-Za-YHm" secondAttribute="trailing" constant="3" id="gvl-P8-ouf"/>
+                <constraint firstAttribute="trailing" secondItem="39C-N1-iDs" secondAttribute="trailing" constant="3" id="wgI-Hi-r3b"/>
+            </constraints>
+            <point key="canvasLocation" x="166" y="159.5"/>
+        </tableCellView>
+    </objects>
+</document>

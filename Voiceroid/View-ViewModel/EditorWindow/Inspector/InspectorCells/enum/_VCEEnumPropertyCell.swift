@@ -9,13 +9,19 @@
 import Cocoa
 
 class _VCEEnumPropertyCell: NSTableCellView {
+    @IBOutlet weak var _popUpButton: NSPopUpButton!
+    
+    
+    @IBAction func PopUpButtonAction(_ sender: Any) {
+        print(1827)
+    }
     func setItems<T:Equatable>(_ items:[_VCEEnumPropertyCellItem<T>]){
         for item in items{
             self.setItem(item)
         }
     }
     func setItem<T:Equatable>(_ item:_VCEEnumPropertyCellItem<T>){
-        
+        _popUpButton.addItem(withTitle: item.name)
     }
 }
 
@@ -27,6 +33,7 @@ extension _VCEEnumPropertyCell{
 class _VCEEnumPropertyCellItem<T: Equatable> {
     let name:String
     private let object:T
+    
     init(name:String, object:T) {
         self.name = name
         self.object = object

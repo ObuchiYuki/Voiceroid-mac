@@ -34,6 +34,11 @@
 		B268881E21F96A3F00309247 /* VCConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881D21F96A3F00309247 /* VCConfig.swift */; };
 		B268882021F96A5700309247 /* VCSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881F21F96A5700309247 /* VCSpeaker.swift */; };
 		B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268882121F96AA200309247 /* VCVoiceroid.swift */; };
+		B27D00FC220A9FCE0037A010 /* VCEInspectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */; };
+		B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */; };
+		B27D0101220AAB250037A010 /* VCEInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D0100220AAB250037A010 /* VCEInspectable.swift */; };
+		B27D0104220AD05E0037A010 /* _VCEStringPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */; };
+		B27D0106220AD0640037A010 /* _VCEStringPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */; };
 		B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */; };
 		B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E021FDE54300A7C138 /* VCMainMenu.swift */; };
 		B28775E321FDFC7C00A7C138 /* VCVoiceroidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */; };
@@ -79,6 +84,11 @@
 		B268881D21F96A3F00309247 /* VCConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfig.swift; sourceTree = "<group>"; };
 		B268881F21F96A5700309247 /* VCSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeaker.swift; sourceTree = "<group>"; };
 		B268882121F96AA200309247 /* VCVoiceroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroid.swift; sourceTree = "<group>"; };
+		B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectorManager.swift; sourceTree = "<group>"; };
+		B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEInspectorViewModel.swift; sourceTree = "<group>"; };
+		B27D0100220AAB250037A010 /* VCEInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectable.swift; sourceTree = "<group>"; };
+		B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEStringPropertyCell.swift; sourceTree = "<group>"; };
+		B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCEStringPropertyCell.xib; sourceTree = "<group>"; };
 		B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCApplicationStateSaver.swift; sourceTree = "<group>"; };
 		B28775E021FDE54300A7C138 /* VCMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMainMenu.swift; sourceTree = "<group>"; };
 		B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroidManager.swift; sourceTree = "<group>"; };
@@ -180,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */,
+				B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */,
 				B24CC75F220910860049B755 /* InspectorCells */,
 			);
 			path = Inspector;
@@ -188,6 +199,7 @@
 		B24CC75F220910860049B755 /* InspectorCells */ = {
 			isa = PBXGroup;
 			children = (
+				B27D0102220AD04E0037A010 /* string */,
 				B24CC765220911EC0049B755 /* enum */,
 				B24CC764220911E00049B755 /* number */,
 			);
@@ -296,6 +308,24 @@
 			path = Voiceroid;
 			sourceTree = "<group>";
 		};
+		B27D00FD220A9FFD0037A010 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */,
+				B27D0100220AAB250037A010 /* VCEInspectable.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B27D0102220AD04E0037A010 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */,
+				B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
 		B28775DF21FDE53800A7C138 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +349,7 @@
 		B29585EA220807C80089A26F /* EditorWindow */ = {
 			isa = PBXGroup;
 			children = (
+				B27D00FD220A9FFD0037A010 /* Manager */,
 				B24CC75B220812DE0049B755 /* Window */,
 				B29585DF2207CA1C0089A26F /* Editor */,
 				B24CC75C22090DFA0049B755 /* Inspector */,
@@ -409,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24CC769220912300049B755 /* _VCEEnumPropertyCell.xib in Resources */,
+				B27D0106220AD0640037A010 /* _VCEStringPropertyCell.xib in Resources */,
 				B24744FF20528F6F00423131 /* Assets.xcassets in Resources */,
 				B260606F21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib in Resources */,
 				B24CC763220911160049B755 /* _VCENumberPropertyCell.xib in Resources */,
@@ -430,12 +462,15 @@
 				B29585E12207CA330089A26F /* VCEditorViewController.swift in Sources */,
 				B24CC767220912170049B755 /* _VCEEnumPropertyCell.swift in Sources */,
 				B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */,
+				B27D00FC220A9FCE0037A010 /* VCEInspectorManager.swift in Sources */,
 				B24CC75A220811FA0049B755 /* VCEditorWindowController.swift in Sources */,
 				B2E1AA1321FF340700751EDE /* _VCMainMenuModel.swift in Sources */,
 				B260607321FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift in Sources */,
 				B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */,
+				B27D0101220AAB250037A010 /* VCEInspectable.swift in Sources */,
 				B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */,
 				B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */,
+				B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */,
 				B208715822043C6E00621580 /* RMDataStore.swift in Sources */,
 				B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */,
 				B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */,
@@ -443,6 +478,7 @@
 				B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */,
 				B28C60B021FD916E00A4D4AD /* VCParamatorViewController.swift in Sources */,
 				B28C60B221FD917600A4D4AD /* _VCParamatorViewModel.swift in Sources */,
+				B27D0104220AD05E0037A010 /* _VCEStringPropertyCell.swift in Sources */,
 				B29585E92207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift in Sources */,
 				B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */,
 				B24CC761220911060049B755 /* _VCENumberPropertyCell.swift in Sources */,

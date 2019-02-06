@@ -9,20 +9,35 @@
 import AppKit
 
 class VCEInspectorViewContorller: NSViewController {
-    @IBOutlet weak var tableView:NSTableView!
+    @IBOutlet private weak var tableView:NSTableView!
+    private let viewModel = _VCEInspectorViewModel()
     
     override func viewDidLoad() {
-        self.tableView.register(_VCEEnumPropertyCell.nib, forIdentifier: _VCEEnumPropertyCell.identifire)
-        self.tableView.register(_VCENumberPropertyCell.nib, forIdentifier: _VCENumberPropertyCell.identifire)
+        viewModel.viewDidLoad(self)
     }
 }
 
+extension VCEInspectorViewContorller: _VCEInspectorViewModelBinder{
+    func registerItemToTableView(nib: NSNib, for identifier: NSUserInterfaceItemIdentifier) {
+        self.tableView.register(nib, forIdentifier: identifier)
+    }
+}
+
+
 extension VCEInspectorViewContorller: NSTableViewDataSource{
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        return tableView.makeView(withIdentifier: _VCENumberPropertyCell.identifire, owner: self)
+        let cell = tableView.makeView(withIdentifier: viewModel.cellIdentifier(for: row), owner: self)
+        switch viewModel.cellDataType(for: row) {
+        case .number:
+            break
+            //...
+        default:
+            break
+        }
+        return cell
     }
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 29
+        return viewModel.height(of: row)
     }
     func numberOfRows(in tableView: NSTableView) -> Int {
         return 2

@@ -14,13 +14,13 @@ class RMStorage{
     static let shared = RMStorage()
     
     func store<T: RMStorable>(_ value:T, for key: RMStorage.Name<T>){
-        let data = try? JSONEncoder().encode(value)
+        guard let data = try? PropertyListEncoder().encode(value) else {return}
         UserDefaults.standard.set(data, forKey: key.rawValue)
     }
     
     func get<T: RMStorable>(for key: RMStorage.Name<T>) -> T?{
         guard let data = UserDefaults.standard.data(forKey: key.rawValue) else {return nil}
-        return try? JSONDecoder().decode(T.self, from: data)
+        return try? PropertyListDecoder().decode(T.self, from: data)
     }
     
     @discardableResult
@@ -28,7 +28,7 @@ class RMStorage{
         guard let data = UserDefaults.standard.data(forKey: key.rawValue) else {return nil}
         UserDefaults.standard.removeObject(forKey: key.rawValue)
         
-        return try? JSONDecoder().decode(T.self, from: data)
+        return try? PropertyListDecoder().decode(T.self, from: data)
     }
 }
 

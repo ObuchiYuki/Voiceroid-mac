@@ -46,12 +46,16 @@ class _VCCollectionViewLeftAlignedLayout: NSCollectionViewFlowLayout {
         return currentItemAttributes
     }
     func evaluatedMinimumInteritemSpacing(for sectionIndex: Int) -> CGFloat {
-        
+        if let layout = self.collectionView?.collectionViewLayout as? NSCollectionViewFlowLayout{
+            return layout.minimumInteritemSpacing
+        }
         return  self.minimumInteritemSpacing
     }
     
     func evaluatedSectionInsetForItemAtIndex(index: Int) -> NSEdgeInsets {
-        
+        if let layout = self.collectionView?.collectionViewLayout as? NSCollectionViewFlowLayout{
+            return layout.sectionInset
+        }
         return  self.sectionInset
     }
 }

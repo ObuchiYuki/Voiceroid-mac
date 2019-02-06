@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="OBp-qS-wJe">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="f9W-V2-1Dw">
+            <objects>
+                <windowController id="OBp-qS-wJe" customClass="VCPreferenceWindowController" customModule="Voiceroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="環境設定" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="utilityWindow" frameAutosaveName="preference_window" id="a0q-NV-IdA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="OBp-qS-wJe" id="7JQ-ba-qNd"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="FF3-kH-cFx" kind="relationship" relationship="window.shadowedContentViewController" id="G1Y-Jn-x5m"/>
+                    </connections>
+                </windowController>
+                <customObject id="Zny-T7-0Mo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="151"/>
+        </scene>
+        <!--Preference View Controller-->
+        <scene sceneID="IbJ-1Z-bR0">
+            <objects>
+                <viewController id="FF3-kH-cFx" customClass="VCPreferenceViewController" customModule="Voiceroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="Q8E-Zo-AqO">
+                        <rect key="frame" x="0.0" y="0.0" width="285" height="59"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="622-Zg-FCS">
+                                <rect key="frame" x="18" y="22" width="91" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="mKO-Td-Ybc"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="音声の保存場所:" id="v4I-wg-NFu">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xXG-ce-cyf">
+                                <rect key="frame" x="113" y="17" width="155" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="FLZ-8j-71l"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Desktop" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1Tf-B6-wwf" id="Nib-nj-JR5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="UKE-VV-KkM">
+                                        <items>
+                                            <menuItem title="Desktop" state="on" id="1Tf-B6-wwf"/>
+                                            <menuItem isSeparatorItem="YES" id="COg-jm-IbN"/>
+                                            <menuItem title="選択" id="wDL-HV-bZx">
+                                                <connections>
+                                                    <action selector="didSelectMenuClicked:" target="FF3-kH-cFx" id="LCA-fu-14L"/>
+                                                </connections>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="622-Zg-FCS" firstAttribute="leading" secondItem="Q8E-Zo-AqO" secondAttribute="leading" constant="20" symbolic="YES" id="N56-yd-5rW"/>
+                            <constraint firstItem="xXG-ce-cyf" firstAttribute="leading" secondItem="622-Zg-FCS" secondAttribute="trailing" constant="8" symbolic="YES" id="Nj5-uT-RF9"/>
+                            <constraint firstItem="622-Zg-FCS" firstAttribute="top" secondItem="Q8E-Zo-AqO" secondAttribute="top" constant="20" symbolic="YES" id="Q6H-Z0-Ue1"/>
+                            <constraint firstItem="622-Zg-FCS" firstAttribute="baseline" secondItem="xXG-ce-cyf" secondAttribute="baseline" id="hGX-aK-eNJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xXG-ce-cyf" secondAttribute="trailing" constant="20" symbolic="YES" id="tZ5-yn-s2v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_fileSelectionMenu" destination="xXG-ce-cyf" id="VEP-f7-cOE"/>
+                    </connections>
+                </viewController>
+                <customObject id="5Cj-Xf-72u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.5" y="20.5"/>
+        </scene>
+    </scenes>
+</document>

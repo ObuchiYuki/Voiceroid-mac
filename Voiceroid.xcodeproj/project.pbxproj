@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B208715822043C6E00621580 /* RMDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208715722043C6E00621580 /* RMDataStore.swift */; };
+		B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */; };
+		B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */; };
+		B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234ACCD22054FE6001A1B11 /* VCFileManager.swift */; };
+		B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24744FA20528F6F00423131 /* AppDelegate.swift */; };
+		B24744FF20528F6F00423131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24744FE20528F6F00423131 /* Assets.xcassets */; };
+		B247450220528F6F00423131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B247450020528F6F00423131 /* Main.storyboard */; };
+		B24CC75A220811FA0049B755 /* VCEditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CC759220811FA0049B755 /* VCEditorWindowController.swift */; };
+		B24CC75E22090E540049B755 /* VCEInspectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */; };
+		B24CC761220911060049B755 /* _VCENumberPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CC760220911060049B755 /* _VCENumberPropertyCell.swift */; };
+		B24CC763220911160049B755 /* _VCENumberPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24CC762220911160049B755 /* _VCENumberPropertyCell.xib */; };
+		B24CC767220912170049B755 /* _VCEEnumPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CC766220912170049B755 /* _VCEEnumPropertyCell.swift */; };
+		B24CC769220912300049B755 /* _VCEEnumPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24CC768220912300049B755 /* _VCEEnumPropertyCell.xib */; };
+		B25E06B52200072300334671 /* VCPreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E06B42200072300334671 /* VCPreferenceWindowController.swift */; };
+		B25E06B72200077000334671 /* _VCPreferenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E06B62200077000334671 /* _VCPreferenceViewModel.swift */; };
+		B25E06BD22005EBA00334671 /* VCPreferenceWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25E06BC22005EBA00334671 /* VCPreferenceWindow.storyboard */; };
+		B260606F21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B260606E21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib */; };
+		B260607321FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607221FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift */; };
+		B260607521FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607421FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift */; };
+		B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607721FC60AC0002A6CD /* VCConfigManager.swift */; };
+		B260607D21FC6B7B0002A6CD /* VCMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607C21FC6B7B0002A6CD /* VCMainWindowController.swift */; };
+		B260607F21FC6C150002A6CD /* _VCMainWindowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607E21FC6C150002A6CD /* _VCMainWindowViewModel.swift */; };
+		B260608121FC6FDA0002A6CD /* VCTextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260608021FC6FDA0002A6CD /* VCTextInputViewController.swift */; };
+		B260608721FD4E190002A6CD /* _VCTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260608621FD4E190002A6CD /* _VCTextInputViewModel.swift */; };
+		B268881E21F96A3F00309247 /* VCConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881D21F96A3F00309247 /* VCConfig.swift */; };
+		B268882021F96A5700309247 /* VCSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881F21F96A5700309247 /* VCSpeaker.swift */; };
+		B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268882121F96AA200309247 /* VCVoiceroid.swift */; };
+		B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */; };
+		B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E021FDE54300A7C138 /* VCMainMenu.swift */; };
+		B28775E321FDFC7C00A7C138 /* VCVoiceroidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */; };
+		B28C60B021FD916E00A4D4AD /* VCParamatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C60AF21FD916E00A4D4AD /* VCParamatorViewController.swift */; };
+		B28C60B221FD917600A4D4AD /* _VCParamatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C60B121FD917600A4D4AD /* _VCParamatorViewModel.swift */; };
+		B28C60B421FD9EDA00A4D4AD /* VCConfigSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C60B321FD9EDA00A4D4AD /* VCConfigSaver.swift */; };
+		B29585E12207CA330089A26F /* VCEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29585E02207CA330089A26F /* VCEditorViewController.swift */; };
+		B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29585E42207CFFD0089A26F /* _VCEditorTextItem.swift */; };
+		B29585E72207CFFD0089A26F /* _VCEditorTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29585E52207CFFD0089A26F /* _VCEditorTextItem.xib */; };
+		B29585E92207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29585E82207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift */; };
+		B29585EC220807E20089A26F /* VCEditorWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29585EB220807E20089A26F /* VCEditorWindow.storyboard */; };
+		B2E1AA1321FF340700751EDE /* _VCMainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E1AA1221FF340700751EDE /* _VCMainMenuModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B208715722043C6E00621580 /* RMDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMDataStore.swift; sourceTree = "<group>"; };
+		B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeakerSelectionViewController.swift; sourceTree = "<group>"; };
+		B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPreferenceViewController.swift; sourceTree = "<group>"; };
+		B234ACCD22054FE6001A1B11 /* VCFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
+		B24744F720528F6F00423131 /* Voiceroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voiceroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24744FA20528F6F00423131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B24744FE20528F6F00423131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B247450120528F6F00423131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B247450320528F6F00423131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B247450420528F6F00423131 /* Voiceroid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Voiceroid.entitlements; sourceTree = "<group>"; };
+		B24CC759220811FA0049B755 /* VCEditorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEditorWindowController.swift; sourceTree = "<group>"; };
+		B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectorViewContorller.swift; sourceTree = "<group>"; };
+		B24CC760220911060049B755 /* _VCENumberPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCENumberPropertyCell.swift; sourceTree = "<group>"; };
+		B24CC762220911160049B755 /* _VCENumberPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCENumberPropertyCell.xib; sourceTree = "<group>"; };
+		B24CC766220912170049B755 /* _VCEEnumPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEEnumPropertyCell.swift; sourceTree = "<group>"; };
+		B24CC768220912300049B755 /* _VCEEnumPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCEEnumPropertyCell.xib; sourceTree = "<group>"; };
+		B25E06B42200072300334671 /* VCPreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPreferenceWindowController.swift; sourceTree = "<group>"; };
+		B25E06B62200077000334671 /* _VCPreferenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCPreferenceViewModel.swift; sourceTree = "<group>"; };
+		B25E06BC22005EBA00334671 /* VCPreferenceWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VCPreferenceWindow.storyboard; sourceTree = "<group>"; };
+		B260606E21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCSpeakerSelectionCell.xib; sourceTree = "<group>"; };
+		B260607221FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCSpeakerSelectionCell.swift; sourceTree = "<group>"; };
+		B260607421FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCSpeakerSelectionViewModel.swift; sourceTree = "<group>"; };
+		B260607721FC60AC0002A6CD /* VCConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfigManager.swift; sourceTree = "<group>"; };
+		B260607C21FC6B7B0002A6CD /* VCMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMainWindowController.swift; sourceTree = "<group>"; };
+		B260607E21FC6C150002A6CD /* _VCMainWindowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCMainWindowViewModel.swift; sourceTree = "<group>"; };
+		B260608021FC6FDA0002A6CD /* VCTextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTextInputViewController.swift; sourceTree = "<group>"; };
+		B260608621FD4E190002A6CD /* _VCTextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCTextInputViewModel.swift; sourceTree = "<group>"; };
+		B268881D21F96A3F00309247 /* VCConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfig.swift; sourceTree = "<group>"; };
+		B268881F21F96A5700309247 /* VCSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeaker.swift; sourceTree = "<group>"; };
+		B268882121F96AA200309247 /* VCVoiceroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroid.swift; sourceTree = "<group>"; };
+		B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCApplicationStateSaver.swift; sourceTree = "<group>"; };
+		B28775E021FDE54300A7C138 /* VCMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMainMenu.swift; sourceTree = "<group>"; };
+		B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroidManager.swift; sourceTree = "<group>"; };
+		B28C60AF21FD916E00A4D4AD /* VCParamatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCParamatorViewController.swift; sourceTree = "<group>"; };
+		B28C60B121FD917600A4D4AD /* _VCParamatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCParamatorViewModel.swift; sourceTree = "<group>"; };
+		B28C60B321FD9EDA00A4D4AD /* VCConfigSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfigSaver.swift; sourceTree = "<group>"; };
+		B29585E02207CA330089A26F /* VCEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEditorViewController.swift; sourceTree = "<group>"; };
+		B29585E42207CFFD0089A26F /* _VCEditorTextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEditorTextItem.swift; sourceTree = "<group>"; };
+		B29585E52207CFFD0089A26F /* _VCEditorTextItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCEditorTextItem.xib; sourceTree = "<group>"; };
+		B29585E82207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCCollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
+		B29585EB220807E20089A26F /* VCEditorWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VCEditorWindow.storyboard; sourceTree = "<group>"; };
+		B2E1AA1221FF340700751EDE /* _VCMainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCMainMenuModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B24744F420528F6F00423131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B208715622043C0800621580 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B208715722043C6E00621580 /* RMDataStore.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		B24744EE20528F6F00423131 = {
+			isa = PBXGroup;
+			children = (
+				B24744F920528F6F00423131 /* Voiceroid */,
+				B24744F820528F6F00423131 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B24744F820528F6F00423131 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B24744F720528F6F00423131 /* Voiceroid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B24744F920528F6F00423131 /* Voiceroid */ = {
+			isa = PBXGroup;
+			children = (
+				B247450320528F6F00423131 /* Info.plist */,
+				B208715622043C0800621580 /* common */,
+				B2F549BA2055F4B0009ABF56 /* Doc */,
+				B2F549B92055F4A3009ABF56 /* Sys */,
+				B260607621FBE94A0002A6CD /* Manager */,
+				B260607021FBE3AB0002A6CD /* View-ViewModel */,
+			);
+			path = Voiceroid;
+			sourceTree = "<group>";
+		};
+		B24CC756220808760049B755 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				B260607C21FC6B7B0002A6CD /* VCMainWindowController.swift */,
+				B260607E21FC6C150002A6CD /* _VCMainWindowViewModel.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		B24CC757220808870049B755 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				B25E06B42200072300334671 /* VCPreferenceWindowController.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		B24CC758220808960049B755 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */,
+				B25E06B62200077000334671 /* _VCPreferenceViewModel.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
+		B24CC75B220812DE0049B755 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				B29585EB220807E20089A26F /* VCEditorWindow.storyboard */,
+				B24CC759220811FA0049B755 /* VCEditorWindowController.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		B24CC75C22090DFA0049B755 /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */,
+				B24CC75F220910860049B755 /* InspectorCells */,
+			);
+			path = Inspector;
+			sourceTree = "<group>";
+		};
+		B24CC75F220910860049B755 /* InspectorCells */ = {
+			isa = PBXGroup;
+			children = (
+				B24CC765220911EC0049B755 /* enum */,
+				B24CC764220911E00049B755 /* number */,
+			);
+			path = InspectorCells;
+			sourceTree = "<group>";
+		};
+		B24CC764220911E00049B755 /* number */ = {
+			isa = PBXGroup;
+			children = (
+				B24CC760220911060049B755 /* _VCENumberPropertyCell.swift */,
+				B24CC762220911160049B755 /* _VCENumberPropertyCell.xib */,
+			);
+			path = number;
+			sourceTree = "<group>";
+		};
+		B24CC765220911EC0049B755 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				B24CC766220912170049B755 /* _VCEEnumPropertyCell.swift */,
+				B24CC768220912300049B755 /* _VCEEnumPropertyCell.xib */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		B25E06B32200071000334671 /* PreferenceWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B25E06BC22005EBA00334671 /* VCPreferenceWindow.storyboard */,
+				B24CC757220808870049B755 /* Window */,
+				B24CC758220808960049B755 /* Preference */,
+			);
+			path = PreferenceWindow;
+			sourceTree = "<group>";
+		};
+		B260607021FBE3AB0002A6CD /* View-ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B29585EA220807C80089A26F /* EditorWindow */,
+				B25E06B32200071000334671 /* PreferenceWindow */,
+				B260607B21FC6B610002A6CD /* MainWindow */,
+			);
+			path = "View-ViewModel";
+			sourceTree = "<group>";
+		};
+		B260607121FBE3BE0002A6CD /* SpeakerSelection */ = {
+			isa = PBXGroup;
+			children = (
+				B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */,
+				B260607421FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift */,
+				B260607221FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift */,
+				B260606E21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib */,
+			);
+			path = SpeakerSelection;
+			sourceTree = "<group>";
+		};
+		B260607621FBE94A0002A6CD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B260607721FC60AC0002A6CD /* VCConfigManager.swift */,
+				B28C60B321FD9EDA00A4D4AD /* VCConfigSaver.swift */,
+				B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */,
+				B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */,
+				B234ACCD22054FE6001A1B11 /* VCFileManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B260607B21FC6B610002A6CD /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B247450020528F6F00423131 /* Main.storyboard */,
+				B24CC756220808760049B755 /* Window */,
+				B28775DF21FDE53800A7C138 /* Menu */,
+				B260608521FD4DEC0002A6CD /* Paramator */,
+				B260608221FC6FE70002A6CD /* TextInput */,
+				B260607121FBE3BE0002A6CD /* SpeakerSelection */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
+		B260608221FC6FE70002A6CD /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				B260608021FC6FDA0002A6CD /* VCTextInputViewController.swift */,
+				B260608621FD4E190002A6CD /* _VCTextInputViewModel.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		B260608521FD4DEC0002A6CD /* Paramator */ = {
+			isa = PBXGroup;
+			children = (
+				B28C60AF21FD916E00A4D4AD /* VCParamatorViewController.swift */,
+				B28C60B121FD917600A4D4AD /* _VCParamatorViewModel.swift */,
+			);
+			path = Paramator;
+			sourceTree = "<group>";
+		};
+		B268881C21F96A3200309247 /* Voiceroid */ = {
+			isa = PBXGroup;
+			children = (
+				B268882121F96AA200309247 /* VCVoiceroid.swift */,
+				B268881D21F96A3F00309247 /* VCConfig.swift */,
+				B268881F21F96A5700309247 /* VCSpeaker.swift */,
+			);
+			path = Voiceroid;
+			sourceTree = "<group>";
+		};
+		B28775DF21FDE53800A7C138 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B28775E021FDE54300A7C138 /* VCMainMenu.swift */,
+				B2E1AA1221FF340700751EDE /* _VCMainMenuModel.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B29585DF2207CA1C0089A26F /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				B29585E02207CA330089A26F /* VCEditorViewController.swift */,
+				B29585E42207CFFD0089A26F /* _VCEditorTextItem.swift */,
+				B29585E52207CFFD0089A26F /* _VCEditorTextItem.xib */,
+				B29585E82207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		B29585EA220807C80089A26F /* EditorWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B24CC75B220812DE0049B755 /* Window */,
+				B29585DF2207CA1C0089A26F /* Editor */,
+				B24CC75C22090DFA0049B755 /* Inspector */,
+			);
+			path = EditorWindow;
+			sourceTree = "<group>";
+		};
+		B2F549B92055F4A3009ABF56 /* Sys */ = {
+			isa = PBXGroup;
+			children = (
+				B24744FA20528F6F00423131 /* AppDelegate.swift */,
+				B268881C21F96A3200309247 /* Voiceroid */,
+			);
+			path = Sys;
+			sourceTree = "<group>";
+		};
+		B2F549BA2055F4B0009ABF56 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				B247450420528F6F00423131 /* Voiceroid.entitlements */,
+				B24744FE20528F6F00423131 /* Assets.xcassets */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B24744F620528F6F00423131 /* Voiceroid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B247450720528F6F00423131 /* Build configuration list for PBXNativeTarget "Voiceroid" */;
+			buildPhases = (
+				B24744F320528F6F00423131 /* Sources */,
+				B24744F420528F6F00423131 /* Frameworks */,
+				B24744F520528F6F00423131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voiceroid;
+			productName = Voiceroid;
+			productReference = B24744F720528F6F00423131 /* Voiceroid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B24744EF20528F6F00423131 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = yuki;
+				TargetAttributes = {
+					B24744F620528F6F00423131 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B24744F220528F6F00423131 /* Build configuration list for PBXProject "Voiceroid" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B24744EE20528F6F00423131;
+			productRefGroup = B24744F820528F6F00423131 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B24744F620528F6F00423131 /* Voiceroid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B24744F520528F6F00423131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24CC769220912300049B755 /* _VCEEnumPropertyCell.xib in Resources */,
+				B24744FF20528F6F00423131 /* Assets.xcassets in Resources */,
+				B260606F21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib in Resources */,
+				B24CC763220911160049B755 /* _VCENumberPropertyCell.xib in Resources */,
+				B29585EC220807E20089A26F /* VCEditorWindow.storyboard in Resources */,
+				B29585E72207CFFD0089A26F /* _VCEditorTextItem.xib in Resources */,
+				B247450220528F6F00423131 /* Main.storyboard in Resources */,
+				B25E06BD22005EBA00334671 /* VCPreferenceWindow.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B24744F320528F6F00423131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25E06B52200072300334671 /* VCPreferenceWindowController.swift in Sources */,
+				B29585E12207CA330089A26F /* VCEditorViewController.swift in Sources */,
+				B24CC767220912170049B755 /* _VCEEnumPropertyCell.swift in Sources */,
+				B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */,
+				B24CC75A220811FA0049B755 /* VCEditorWindowController.swift in Sources */,
+				B2E1AA1321FF340700751EDE /* _VCMainMenuModel.swift in Sources */,
+				B260607321FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift in Sources */,
+				B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */,
+				B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */,
+				B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */,
+				B208715822043C6E00621580 /* RMDataStore.swift in Sources */,
+				B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */,
+				B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */,
+				B25E06B72200077000334671 /* _VCPreferenceViewModel.swift in Sources */,
+				B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */,
+				B28C60B021FD916E00A4D4AD /* VCParamatorViewController.swift in Sources */,
+				B28C60B221FD917600A4D4AD /* _VCParamatorViewModel.swift in Sources */,
+				B29585E92207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift in Sources */,
+				B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */,
+				B24CC761220911060049B755 /* _VCENumberPropertyCell.swift in Sources */,
+				B268881E21F96A3F00309247 /* VCConfig.swift in Sources */,
+				B260607D21FC6B7B0002A6CD /* VCMainWindowController.swift in Sources */,
+				B260608721FD4E190002A6CD /* _VCTextInputViewModel.swift in Sources */,
+				B260607F21FC6C150002A6CD /* _VCMainWindowViewModel.swift in Sources */,
+				B28775E321FDFC7C00A7C138 /* VCVoiceroidManager.swift in Sources */,
+				B260607521FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift in Sources */,
+				B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */,
+				B268882021F96A5700309247 /* VCSpeaker.swift in Sources */,
+				B28C60B421FD9EDA00A4D4AD /* VCConfigSaver.swift in Sources */,
+				B24CC75E22090E540049B755 /* VCEInspectorViewContorller.swift in Sources */,
+				B260608121FC6FDA0002A6CD /* VCTextInputViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B247450020528F6F00423131 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B247450120528F6F00423131 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B247450520528F6F00423131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B247450620528F6F00423131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		B247450820528F6F00423131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y475J6372H;
+				INFOPLIST_FILE = Voiceroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuki.Voiceroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B247450920528F6F00423131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y475J6372H;
+				INFOPLIST_FILE = Voiceroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuki.Voiceroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B24744F220528F6F00423131 /* Build configuration list for PBXProject "Voiceroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B247450520528F6F00423131 /* Debug */,
+				B247450620528F6F00423131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B247450720528F6F00423131 /* Build configuration list for PBXNativeTarget "Voiceroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B247450820528F6F00423131 /* Debug */,
+				B247450920528F6F00423131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B24744EF20528F6F00423131 /* Project object */;
+}

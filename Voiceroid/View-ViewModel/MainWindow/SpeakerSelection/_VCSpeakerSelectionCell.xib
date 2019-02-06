@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="uWj-Nq-iKn" customClass="_VCSpeakerSelectionCell" customModule="Voiceroid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="56" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9MX-Mo-nxI">
+                    <rect key="frame" x="3" y="11" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="LCl-Uc-9pK"/>
+                        <constraint firstAttribute="height" constant="50" id="vNR-9h-vNK"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="VC_S_yukari_icon" id="qce-Uj-g7D"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tun-uM-yOg">
+                    <rect key="frame" x="-2" y="0.0" width="60" height="11"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="きりたん" id="cvj-em-exi">
+                        <font key="font" size="11" name=".HiraKakuInterface-W3"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9MX-Mo-nxI" firstAttribute="top" secondItem="uWj-Nq-iKn" secondAttribute="top" constant="-3" id="3dq-x3-hlY"/>
+                <constraint firstItem="9MX-Mo-nxI" firstAttribute="centerX" secondItem="uWj-Nq-iKn" secondAttribute="centerX" id="A7t-yK-nrA"/>
+                <constraint firstItem="Tun-uM-yOg" firstAttribute="leading" secondItem="uWj-Nq-iKn" secondAttribute="leading" id="WW2-B6-OMM"/>
+                <constraint firstAttribute="trailing" secondItem="Tun-uM-yOg" secondAttribute="trailing" id="j7d-r0-XS8"/>
+                <constraint firstItem="Tun-uM-yOg" firstAttribute="top" secondItem="9MX-Mo-nxI" secondAttribute="bottom" id="vPw-5O-AgI"/>
+            </constraints>
+            <connections>
+                <outlet property="_iconImageView" destination="9MX-Mo-nxI" id="gua-TX-Yjd"/>
+                <outlet property="_nameLable" destination="Tun-uM-yOg" id="z1o-uE-8a0"/>
+                <outlet property="imageView" destination="9MX-Mo-nxI" id="lqd-9f-sVG"/>
+                <outlet property="textField" destination="Tun-uM-yOg" id="fhG-ml-qpz"/>
+            </connections>
+            <point key="canvasLocation" x="-166" y="-30"/>
+        </tableCellView>
+    </objects>
+    <resources>
+        <image name="VC_S_yukari_icon" width="290" height="290"/>
+    </resources>
+</document>

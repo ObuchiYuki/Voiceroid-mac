@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class _VCEEnumPropertyCell: NSTableCellView {
+class _VCEEnumPropertyCell: _VCEPropertyCell {
     @IBOutlet weak var _popUpButton: NSPopUpButton!
     
     
@@ -26,8 +26,8 @@ class _VCEEnumPropertyCell: NSTableCellView {
 }
 
 extension _VCEEnumPropertyCell{
-    static let nib = NSNib(nibNamed: .init("_VCEEnumPropertyCell"), bundle: .main)
-    static let identifire = NSUserInterfaceItemIdentifier(rawValue: "_VCEEnumPropertyCell")
+    static let nib = NSNib(nibNamed: .init("_VCEEnumPropertyCell"), bundle: .main)!
+    static let identifier = NSUserInterfaceItemIdentifier(rawValue: "_VCEEnumPropertyCell")
 }
 
 class _VCEEnumPropertyCellItem<T: Equatable> {

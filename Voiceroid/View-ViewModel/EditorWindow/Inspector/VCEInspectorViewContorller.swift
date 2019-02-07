@@ -18,19 +18,33 @@ class VCEInspectorViewContorller: NSViewController {
 }
 
 extension VCEInspectorViewContorller: _VCEInspectorViewModelBinder{
-    func registerItemToTableView(nib: NSNib, for identifier: NSUserInterfaceItemIdentifier) {
+    func registerNibToTableView(nib: NSNib, for identifier: NSUserInterfaceItemIdentifier) {
         self.tableView.register(nib, forIdentifier: identifier)
     }
 }
 
-
 extension VCEInspectorViewContorller: NSTableViewDataSource{
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeView(withIdentifier: viewModel.cellIdentifier(for: row), owner: self)
+        let identifier = viewModel.cellIdentifier(for: row)
+        let data = viewModel.cellData(for: row)
+        guard let cell = tableView.makeView(withIdentifier: identifier, owner: self) as? _VCEPropertyCell else {return nil}
+        
+        cell.title = data.title
+        
+        
         switch viewModel.cellDataType(for: row) {
+        case .string:
+            guard let data = data as? _VCEStringPropertyCellData else {return nil}
+            guard let cell = cell as? _VCEStringPropertyCell else {return nil}
+            cell.text = data.value
+            
         case .number:
-            break
-            //...
+            guard let data = data as? _VCENumberPropertyCellData else {return nil}
+            guard let cell = cell as? _VCENumberPropertyCell else {return nil}
+            cell.value = data.value
+            cell.maxValue = data.maxValue
+            cell.minValue = data.minValue
+            
         default:
             break
         }
@@ -40,7 +54,7 @@ extension VCEInspectorViewContorller: NSTableViewDataSource{
         return viewModel.height(of: row)
     }
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 2
+        return viewModel.cellCount()
     }
 }
 

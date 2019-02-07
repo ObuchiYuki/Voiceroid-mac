@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-n4-nY7">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-n4-nY7">
                     <rect key="frame" x="2" y="8" width="79" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="TLj-B5-Qr8"/>

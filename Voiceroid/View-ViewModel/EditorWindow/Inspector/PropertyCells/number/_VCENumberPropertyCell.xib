@@ -32,13 +32,13 @@
                     </constraints>
                     <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="8uV-WP-wXi"/>
                 </stepper>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-YZ-0wn">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-YZ-0wn">
                     <rect key="frame" x="2" y="8" width="79" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="asS-cv-hgP"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="OCf-u1-Tdr">
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

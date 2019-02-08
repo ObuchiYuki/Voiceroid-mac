@@ -9,9 +9,6 @@
 # 使用方法
 
 
-
-![image-20190208102208330](/Users/obuchiyuki/Library/Application Support/typora-user-images/image-20190208102208330.png)
-
 現在以下のVoiceroidに対応しています。
 
 - 結月ゆかり (*)

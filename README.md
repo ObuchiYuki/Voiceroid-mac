@@ -8,6 +8,8 @@
 
 # 使用方法
 
+![image](https://user-images.githubusercontent.com/20896810/52453882-abd83580-2b8c-11e9-9f5b-1f3c59b2b23c.png)
+
 
 現在以下のVoiceroidに対応しています。
 

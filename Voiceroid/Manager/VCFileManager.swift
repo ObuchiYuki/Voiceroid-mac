@@ -19,7 +19,7 @@ class VCFileSaveManager {
     }
     func saveDirectory() -> URL{
         if let url = RMStorage.shared.get(for: ._saveURLKey) {
-            return url.raw
+            return url
         }
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         return URL(fileURLWithPath: documentPath)
@@ -37,7 +37,7 @@ class VCFileSaveManager {
     }
     
     func setSaveUrl(_ url:URL){
-        RMStorage.shared.store(RMWrapper(url), for: ._saveURLKey)
+        RMStorage.shared.store(url, for: ._saveURLKey)
     }
     
     func showModal(_ completion:@escaping (URL)->()){

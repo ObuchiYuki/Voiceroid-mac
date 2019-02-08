@@ -52,9 +52,9 @@ class VCConfigSaver {
     }
 }
 
-private extension RMStorage.Name{
+private extension RMStorage.Key{
     /// 話者固有の保存用キーを生成します。
-    static func key(for spekaer:VCSpeaker) -> RMStorage.Name<VCConfig> {
-        return RMStorage.Name(rawValue: "VCConfigSaver.speaker.\(spekaer.name.lowercased())")
+    static func key(for spekaer:VCSpeaker) -> RMStorage.Key<VCConfig> {
+        return RMStorage.Key(rawValue: "VCConfigSaver.speaker.\(spekaer.name.lowercased())")
     }
 }

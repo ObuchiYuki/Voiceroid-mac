@@ -33,14 +33,14 @@ class VCApplicationStateSaver {
     }
 }
 
-private extension RMStorage.Name{
-    static var _lastSpeakerKey:RMStorage.Name<VCSpeaker> {
-        return RMStorage.Name(rawValue: "VCApplicationStateSaver._lastSpeakerKey")
+private extension RMStorage.Key{
+    static var _lastSpeakerKey:RMStorage.Key<VCSpeaker> {
+        return RMStorage.Key(rawValue: "VCApplicationStateSaver._lastSpeakerKey")
     }
 }
 
-extension RMStorage.Name{
-    static var _saveURLKey:RMStorage.Name<RMWrapper<URL>> {
-        return RMStorage.Name(rawValue: "VCApplicationStateSaver._saveURLKey")
+extension RMStorage.Key{
+    static var _saveURLKey:RMStorage.Key<URL> {
+        return RMStorage.Key(rawValue: "VCApplicationStateSaver._saveURLKey")
     }
 }

@@ -9,23 +9,55 @@
 import AppKit
 
 class VCEInspectorViewContorller: NSViewController {
-    @IBOutlet weak var tableView:NSTableView!
+    @IBOutlet private weak var tableView:NSTableView!
+    private let viewModel = _VCEInspectorViewModel()
     
     override func viewDidLoad() {
-        self.tableView.register(_VCEEnumPropertyCell.nib, forIdentifier: _VCEEnumPropertyCell.identifire)
-        self.tableView.register(_VCENumberPropertyCell.nib, forIdentifier: _VCENumberPropertyCell.identifire)
+        viewModel.viewDidLoad(self)
+    }
+}
+
+extension VCEInspectorViewContorller: _VCEInspectorViewModelBinder{
+    func registerNibToTableView(nib: NSNib, for identifier: NSUserInterfaceItemIdentifier) {
+        self.tableView.register(nib, forIdentifier: identifier)
+    }
+    func reloadTableView() {
+        self.tableView.reloadData()
     }
 }
 
 extension VCEInspectorViewContorller: NSTableViewDataSource{
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        return tableView.makeView(withIdentifier: _VCENumberPropertyCell.identifire, owner: self)
+        let identifier = viewModel.cellIdentifier(for: row)
+        let data = viewModel.cellData(for: row)
+        guard let cell = tableView.makeView(withIdentifier: identifier, owner: self) as? _VCEPropertyCell else {return nil}
+        
+        cell.title = data.title
+        
+        
+        switch viewModel.cellDataType(for: row) {
+        case .string:
+            guard let data = data as? _VCEStringPropertyCellData else {return nil}
+            guard let cell = cell as? _VCEStringPropertyCell else {return nil}
+            cell.text = data.value
+            
+        case .number:
+            guard let data = data as? _VCENumberPropertyCellData else {return nil}
+            guard let cell = cell as? _VCENumberPropertyCell else {return nil}
+            cell.value = data.value
+            cell.maxValue = data.maxValue
+            cell.minValue = data.minValue
+            
+        default:
+            break
+        }
+        return cell
     }
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 29
+        return viewModel.height(of: row)
     }
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 2
+        return viewModel.cellCount()
     }
 }
 

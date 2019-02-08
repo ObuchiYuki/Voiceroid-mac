@@ -11,6 +11,7 @@
 		B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */; };
 		B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */; };
 		B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234ACCD22054FE6001A1B11 /* VCFileManager.swift */; };
+		B23F03A1220CFBC5001D948F /* _VCEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */; };
 		B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24744FA20528F6F00423131 /* AppDelegate.swift */; };
 		B24744FF20528F6F00423131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24744FE20528F6F00423131 /* Assets.xcassets */; };
 		B247450220528F6F00423131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B247450020528F6F00423131 /* Main.storyboard */; };
@@ -34,6 +35,12 @@
 		B268881E21F96A3F00309247 /* VCConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881D21F96A3F00309247 /* VCConfig.swift */; };
 		B268882021F96A5700309247 /* VCSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881F21F96A5700309247 /* VCSpeaker.swift */; };
 		B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268882121F96AA200309247 /* VCVoiceroid.swift */; };
+		B27D00FC220A9FCE0037A010 /* VCEInspectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */; };
+		B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */; };
+		B27D0104220AD05E0037A010 /* _VCEStringPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */; };
+		B27D0106220AD0640037A010 /* _VCEStringPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */; };
+		B27D010B220BB61F0037A010 /* _VCEPropertyCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D010A220BB61F0037A010 /* _VCEPropertyCellData.swift */; };
+		B27D010D220BB9F90037A010 /* _VCEPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D010C220BB9F90037A010 /* _VCEPropertyCell.swift */; };
 		B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */; };
 		B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E021FDE54300A7C138 /* VCMainMenu.swift */; };
 		B28775E321FDFC7C00A7C138 /* VCVoiceroidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */; };
@@ -53,6 +60,7 @@
 		B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeakerSelectionViewController.swift; sourceTree = "<group>"; };
 		B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPreferenceViewController.swift; sourceTree = "<group>"; };
 		B234ACCD22054FE6001A1B11 /* VCFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
+		B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEditorViewModel.swift; sourceTree = "<group>"; };
 		B24744F720528F6F00423131 /* Voiceroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voiceroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24744FA20528F6F00423131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B24744FE20528F6F00423131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +87,12 @@
 		B268881D21F96A3F00309247 /* VCConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfig.swift; sourceTree = "<group>"; };
 		B268881F21F96A5700309247 /* VCSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeaker.swift; sourceTree = "<group>"; };
 		B268882121F96AA200309247 /* VCVoiceroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroid.swift; sourceTree = "<group>"; };
+		B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectorManager.swift; sourceTree = "<group>"; };
+		B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEInspectorViewModel.swift; sourceTree = "<group>"; };
+		B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEStringPropertyCell.swift; sourceTree = "<group>"; };
+		B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _VCEStringPropertyCell.xib; sourceTree = "<group>"; };
+		B27D010A220BB61F0037A010 /* _VCEPropertyCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEPropertyCellData.swift; sourceTree = "<group>"; };
+		B27D010C220BB9F90037A010 /* _VCEPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEPropertyCell.swift; sourceTree = "<group>"; };
 		B28775DD21FDBBB300A7C138 /* VCApplicationStateSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCApplicationStateSaver.swift; sourceTree = "<group>"; };
 		B28775E021FDE54300A7C138 /* VCMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMainMenu.swift; sourceTree = "<group>"; };
 		B28775E221FDFC7C00A7C138 /* VCVoiceroidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroidManager.swift; sourceTree = "<group>"; };
@@ -132,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B247450320528F6F00423131 /* Info.plist */,
+				B24744FA20528F6F00423131 /* AppDelegate.swift */,
 				B208715622043C0800621580 /* common */,
 				B2F549BA2055F4B0009ABF56 /* Doc */,
 				B2F549B92055F4A3009ABF56 /* Sys */,
@@ -170,7 +185,6 @@
 		B24CC75B220812DE0049B755 /* Window */ = {
 			isa = PBXGroup;
 			children = (
-				B29585EB220807E20089A26F /* VCEditorWindow.storyboard */,
 				B24CC759220811FA0049B755 /* VCEditorWindowController.swift */,
 			);
 			path = Window;
@@ -180,18 +194,22 @@
 			isa = PBXGroup;
 			children = (
 				B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */,
-				B24CC75F220910860049B755 /* InspectorCells */,
+				B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */,
+				B24CC75F220910860049B755 /* PropertyCells */,
 			);
 			path = Inspector;
 			sourceTree = "<group>";
 		};
-		B24CC75F220910860049B755 /* InspectorCells */ = {
+		B24CC75F220910860049B755 /* PropertyCells */ = {
 			isa = PBXGroup;
 			children = (
+				B27D010A220BB61F0037A010 /* _VCEPropertyCellData.swift */,
+				B27D0102220AD04E0037A010 /* string */,
 				B24CC765220911EC0049B755 /* enum */,
 				B24CC764220911E00049B755 /* number */,
+				B27D010C220BB9F90037A010 /* _VCEPropertyCell.swift */,
 			);
-			path = InspectorCells;
+			path = PropertyCells;
 			sourceTree = "<group>";
 		};
 		B24CC764220911E00049B755 /* number */ = {
@@ -296,6 +314,23 @@
 			path = Voiceroid;
 			sourceTree = "<group>";
 		};
+		B27D00FD220A9FFD0037A010 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B27D00FB220A9FCE0037A010 /* VCEInspectorManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B27D0102220AD04E0037A010 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0103220AD05E0037A010 /* _VCEStringPropertyCell.swift */,
+				B27D0105220AD0640037A010 /* _VCEStringPropertyCell.xib */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
 		B28775DF21FDE53800A7C138 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				B29585E02207CA330089A26F /* VCEditorViewController.swift */,
+				B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */,
 				B29585E42207CFFD0089A26F /* _VCEditorTextItem.swift */,
 				B29585E52207CFFD0089A26F /* _VCEditorTextItem.xib */,
 				B29585E82207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift */,
@@ -319,6 +355,8 @@
 		B29585EA220807C80089A26F /* EditorWindow */ = {
 			isa = PBXGroup;
 			children = (
+				B29585EB220807E20089A26F /* VCEditorWindow.storyboard */,
+				B27D00FD220A9FFD0037A010 /* Manager */,
 				B24CC75B220812DE0049B755 /* Window */,
 				B29585DF2207CA1C0089A26F /* Editor */,
 				B24CC75C22090DFA0049B755 /* Inspector */,
@@ -329,7 +367,6 @@
 		B2F549B92055F4A3009ABF56 /* Sys */ = {
 			isa = PBXGroup;
 			children = (
-				B24744FA20528F6F00423131 /* AppDelegate.swift */,
 				B268881C21F96A3200309247 /* Voiceroid */,
 			);
 			path = Sys;
@@ -409,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24CC769220912300049B755 /* _VCEEnumPropertyCell.xib in Resources */,
+				B27D0106220AD0640037A010 /* _VCEStringPropertyCell.xib in Resources */,
 				B24744FF20528F6F00423131 /* Assets.xcassets in Resources */,
 				B260606F21FB19C10002A6CD /* _VCSpeakerSelectionCell.xib in Resources */,
 				B24CC763220911160049B755 /* _VCENumberPropertyCell.xib in Resources */,
@@ -428,14 +466,17 @@
 			files = (
 				B25E06B52200072300334671 /* VCPreferenceWindowController.swift in Sources */,
 				B29585E12207CA330089A26F /* VCEditorViewController.swift in Sources */,
+				B23F03A1220CFBC5001D948F /* _VCEditorViewModel.swift in Sources */,
 				B24CC767220912170049B755 /* _VCEEnumPropertyCell.swift in Sources */,
 				B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */,
+				B27D00FC220A9FCE0037A010 /* VCEInspectorManager.swift in Sources */,
 				B24CC75A220811FA0049B755 /* VCEditorWindowController.swift in Sources */,
 				B2E1AA1321FF340700751EDE /* _VCMainMenuModel.swift in Sources */,
 				B260607321FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift in Sources */,
 				B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */,
 				B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */,
 				B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */,
+				B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */,
 				B208715822043C6E00621580 /* RMDataStore.swift in Sources */,
 				B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */,
 				B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */,
@@ -443,6 +484,7 @@
 				B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */,
 				B28C60B021FD916E00A4D4AD /* VCParamatorViewController.swift in Sources */,
 				B28C60B221FD917600A4D4AD /* _VCParamatorViewModel.swift in Sources */,
+				B27D0104220AD05E0037A010 /* _VCEStringPropertyCell.swift in Sources */,
 				B29585E92207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift in Sources */,
 				B28775DE21FDBBB300A7C138 /* VCApplicationStateSaver.swift in Sources */,
 				B24CC761220911060049B755 /* _VCENumberPropertyCell.swift in Sources */,
@@ -454,6 +496,8 @@
 				B260607521FBE4000002A6CD /* _VCSpeakerSelectionViewModel.swift in Sources */,
 				B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */,
 				B268882021F96A5700309247 /* VCSpeaker.swift in Sources */,
+				B27D010D220BB9F90037A010 /* _VCEPropertyCell.swift in Sources */,
+				B27D010B220BB61F0037A010 /* _VCEPropertyCellData.swift in Sources */,
 				B28C60B421FD9EDA00A4D4AD /* VCConfigSaver.swift in Sources */,
 				B24CC75E22090E540049B755 /* VCEInspectorViewContorller.swift in Sources */,
 				B260608121FC6FDA0002A6CD /* VCTextInputViewController.swift in Sources */,

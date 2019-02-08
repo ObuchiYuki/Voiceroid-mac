@@ -8,25 +8,32 @@
 
 import Cocoa
 
-class _VCEEnumPropertyCell: NSTableCellView {
+class _VCEEnumPropertyCell: _VCEPropertyCell {
+    @IBOutlet weak var _popUpButton: NSPopUpButton!
+    
+    
+    @IBAction func PopUpButtonAction(_ sender: Any) {
+        print(1827)
+    }
     func setItems<T:Equatable>(_ items:[_VCEEnumPropertyCellItem<T>]){
         for item in items{
             self.setItem(item)
         }
     }
     func setItem<T:Equatable>(_ item:_VCEEnumPropertyCellItem<T>){
-        
+        _popUpButton.addItem(withTitle: item.name)
     }
 }
 
 extension _VCEEnumPropertyCell{
-    static let nib = NSNib(nibNamed: .init("_VCEEnumPropertyCell"), bundle: .main)
-    static let identifire = NSUserInterfaceItemIdentifier(rawValue: "_VCEEnumPropertyCell")
+    static let nib = NSNib(nibNamed: .init("_VCEEnumPropertyCell"), bundle: .main)!
+    static let identifier = NSUserInterfaceItemIdentifier(rawValue: "_VCEEnumPropertyCell")
 }
 
 class _VCEEnumPropertyCellItem<T: Equatable> {
     let name:String
     private let object:T
+    
     init(name:String, object:T) {
         self.name = name
         self.object = object

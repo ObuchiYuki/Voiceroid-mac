@@ -9,19 +9,12 @@
 import Cocoa
 
 class _VCEditorTextItem: NSCollectionViewItem {
-    func setText(_ text:String){
-        self._label.stringValue = text
-    }
-    var fittingSize:NSSize{
-        return self._label.cellSize
+    override var title: String?{
+        set{_label.stringValue = newValue ?? ""}
+        get{return _label.stringValue}
     }
     
     @IBOutlet weak private var _label: NSTextFieldCell!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 }
 
 extension NSUserInterfaceItemIdentifier{

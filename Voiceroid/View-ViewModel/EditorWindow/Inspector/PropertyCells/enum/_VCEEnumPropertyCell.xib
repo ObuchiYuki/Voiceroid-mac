@@ -13,44 +13,42 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-n4-nY7">
-                    <rect key="frame" x="2" y="8" width="79" height="14"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-n4-nY7">
+                    <rect key="frame" x="2" y="8" width="54" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="75" id="TLj-B5-Qr8"/>
+                        <constraint firstAttribute="width" constant="50" id="TLj-B5-Qr8"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="Q8Q-0Y-fMY">
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-XR-f3l">
-                    <rect key="frame" x="81" y="1" width="219" height="25"/>
+                    <rect key="frame" x="56" y="2" width="244" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="CpU-uD-7Kf"/>
                     </constraints>
-                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rjc-a5-LA9" id="sgB-Fb-XvJ">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="sgB-Fb-XvJ">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
-                        <menu key="menu" id="8pI-3Y-oOK">
-                            <items>
-                                <menuItem title="Item 1" state="on" id="rjc-a5-LA9"/>
-                                <menuItem title="Item 2" id="pxY-F8-i0a"/>
-                                <menuItem title="Item 3" id="AiD-hn-R4L"/>
-                            </items>
-                        </menu>
+                        <menu key="menu" id="8pI-3Y-oOK"/>
                     </popUpButtonCell>
+                    <connections>
+                        <action selector="PopUpButtonAction:" target="utC-WF-cfT" id="cf8-X0-9UO"/>
+                    </connections>
                 </popUpButton>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="WPC-XR-f3l" secondAttribute="trailing" constant="3" id="7b5-ED-AoS"/>
                 <constraint firstItem="WPC-XR-f3l" firstAttribute="leading" secondItem="ebf-n4-nY7" secondAttribute="trailing" constant="4" id="PWR-oy-A7G"/>
-                <constraint firstAttribute="bottom" secondItem="WPC-XR-f3l" secondAttribute="bottom" constant="4" id="Uki-8o-phn"/>
                 <constraint firstItem="ebf-n4-nY7" firstAttribute="leading" secondItem="utC-WF-cfT" secondAttribute="leading" constant="4" id="Xlc-WS-4z3"/>
                 <constraint firstItem="ebf-n4-nY7" firstAttribute="centerY" secondItem="utC-WF-cfT" secondAttribute="centerY" id="aKi-OE-82q"/>
-                <constraint firstItem="WPC-XR-f3l" firstAttribute="centerY" secondItem="utC-WF-cfT" secondAttribute="centerY" id="gEw-gR-CEF"/>
-                <constraint firstItem="WPC-XR-f3l" firstAttribute="top" secondItem="utC-WF-cfT" secondAttribute="top" constant="4" id="iTq-LL-aIu"/>
+                <constraint firstItem="WPC-XR-f3l" firstAttribute="centerY" secondItem="utC-WF-cfT" secondAttribute="centerY" constant="-1" id="gEw-gR-CEF"/>
             </constraints>
+            <connections>
+                <outlet property="_popUpButton" destination="WPC-XR-f3l" id="dBh-uX-1VV"/>
+            </connections>
             <point key="canvasLocation" x="166" y="235.5"/>
         </tableCellView>
     </objects>

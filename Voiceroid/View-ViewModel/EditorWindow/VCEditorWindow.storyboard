@@ -89,7 +89,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="415" height="524"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="9cs-Kr-yDb">
+                                        <collectionView selectable="YES" id="9cs-Kr-yDb">
                                             <rect key="frame" x="0.0" y="0.0" width="415" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewLayout key="collectionViewLayout" id="JOF-eL-3GX" customClass="_VCCollectionViewLeftAlignedLayout" customModule="Voiceroid" customModuleProvider="target"/>
@@ -134,13 +134,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="247" height="524"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-0w-6tP">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-0w-6tP">
                                 <rect key="frame" x="0.0" y="0.0" width="247" height="524"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="z1y-Ss-bBq">
                                     <rect key="frame" x="0.0" y="0.0" width="247" height="524"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="9Sw-j9-h3S">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="9Sw-j9-h3S">
                                             <rect key="frame" x="0.0" y="0.0" width="247" height="524"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>

@@ -14,9 +14,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Za-YHm">
-                    <rect key="frame" x="2" y="163" width="79" height="14"/>
+                    <rect key="frame" x="2" y="163" width="54" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="75" id="wDZ-b2-RUe"/>
+                        <constraint firstAttribute="width" constant="50" id="wDZ-b2-RUe"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="nfB-TH-973">
                         <font key="font" metaFont="smallSystem"/>
@@ -25,24 +25,24 @@
                     </textFieldCell>
                 </textField>
                 <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39C-N1-iDs">
-                    <rect key="frame" x="82" y="3" width="215" height="175"/>
+                    <rect key="frame" x="57" y="3" width="240" height="175"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="xVE-A1-Zct">
-                        <rect key="frame" x="0.0" y="0.0" width="215" height="175"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="175"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JbS-ka-Zi8">
-                                <rect key="frame" x="0.0" y="0.0" width="215" height="175"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="175"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                <size key="minSize" width="215" height="175"/>
+                                <size key="minSize" width="240" height="175"/>
                                 <size key="maxSize" width="240" height="10000000"/>
                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             </textView>
                         </subviews>
                     </clipView>
                     <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hqc-Y2-CLg">
-                        <rect key="frame" x="199" y="0.0" width="16" height="175"/>
+                        <rect key="frame" x="224" y="0.0" width="16" height="175"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -55,6 +55,9 @@
                 <constraint firstItem="39C-N1-iDs" firstAttribute="leading" secondItem="x4f-Za-YHm" secondAttribute="trailing" constant="3" id="gvl-P8-ouf"/>
                 <constraint firstAttribute="trailing" secondItem="39C-N1-iDs" secondAttribute="trailing" constant="3" id="wgI-Hi-r3b"/>
             </constraints>
+            <connections>
+                <outlet property="_textView" destination="JbS-ka-Zi8" id="9oH-cV-Waf"/>
+            </connections>
             <point key="canvasLocation" x="166" y="159.5"/>
         </tableCellView>
     </objects>

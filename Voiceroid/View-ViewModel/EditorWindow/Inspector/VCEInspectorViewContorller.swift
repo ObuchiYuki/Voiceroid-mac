@@ -21,6 +21,9 @@ extension VCEInspectorViewContorller: _VCEInspectorViewModelBinder{
     func registerNibToTableView(nib: NSNib, for identifier: NSUserInterfaceItemIdentifier) {
         self.tableView.register(nib, forIdentifier: identifier)
     }
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
 }
 
 extension VCEInspectorViewContorller: NSTableViewDataSource{

@@ -8,11 +8,20 @@
 
 import Foundation
 
+/// InspectorwとEditorViewをつなぎます。
+/// ---通知---
+/// - VCEInspectorManagerChangeInspectingObject {object:VCConfig}
 class VCEInspectorManager {
     static let `default` = VCEInspectorManager()
     
-    func setConfigToInspector(_ config:VCConfig){
-        
+    var currentInspectingConfig:VCConfig? = nil{
+        didSet{
+            NotificationCenter.default.post(name: .VCEInspectorManagerChangeInspectingConfig, object: currentInspectingConfig)
+        }
     }
 }
 
+
+extension Notification.Name{
+    static let VCEInspectorManagerChangeInspectingConfig = Notification.Name(rawValue: "VCEInspectorManagerChangeInspectingConfig")
+}

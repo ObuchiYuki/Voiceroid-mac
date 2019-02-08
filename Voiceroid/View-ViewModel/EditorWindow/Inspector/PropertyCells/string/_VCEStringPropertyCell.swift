@@ -9,9 +9,11 @@
 import AppKit
 
 class _VCEStringPropertyCell: _VCEPropertyCell {
+    @IBOutlet var _textView: NSTextView!
+    
     var text:String{
-        set{}
-        get{return ""}
+        set{_textView.string = newValue}
+        get{return _textView.string}
     }
 }
 

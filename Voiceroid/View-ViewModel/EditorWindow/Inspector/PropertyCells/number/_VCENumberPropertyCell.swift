@@ -9,9 +9,10 @@
 import Cocoa
 
 class _VCENumberPropertyCell: _VCEPropertyCell {
+    @IBOutlet weak var _numberField: NSTextField!
     var value:Double{
-        set{}
-        get{return 0}
+        set{_numberField.stringValue = "\(newValue)"}
+        get{return Double(_numberField.stringValue)!}
     }
     var maxValue:Double{
         set{}

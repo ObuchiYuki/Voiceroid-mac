@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-BK-xVw">
-                    <rect key="frame" x="82" y="4" width="168" height="22"/>
+                    <rect key="frame" x="57" y="4" width="193" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1WE-ed-AnH"/>
                     </constraints>
@@ -33,9 +33,9 @@
                     <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="8uV-WP-wXi"/>
                 </stepper>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-YZ-0wn">
-                    <rect key="frame" x="2" y="8" width="79" height="14"/>
+                    <rect key="frame" x="2" y="8" width="54" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="75" id="asS-cv-hgP"/>
+                        <constraint firstAttribute="width" constant="50" id="asS-cv-hgP"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="OCf-u1-Tdr">
                         <font key="font" metaFont="smallSystem"/>
@@ -53,6 +53,9 @@
                 <constraint firstItem="IQ4-BK-xVw" firstAttribute="centerY" secondItem="Z0l-xk-0cH" secondAttribute="centerY" id="igd-D6-ULj"/>
                 <constraint firstItem="yRD-YZ-0wn" firstAttribute="centerY" secondItem="Z0l-xk-0cH" secondAttribute="centerY" id="jCj-Fa-TCN"/>
             </constraints>
+            <connections>
+                <outlet property="_numberField" destination="IQ4-BK-xVw" id="yCL-so-jId"/>
+            </connections>
             <point key="canvasLocation" x="134.5" y="235.5"/>
         </tableCellView>
     </objects>

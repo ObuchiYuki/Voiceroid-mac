@@ -8,10 +8,9 @@
 
 import AppKit
 
-let sampleTexts = ["コールドウォレットとは。", "仮想通貨をインターネットに接続しない", "物理デバイスで保管するもの。", "コールドウォレットを使うことで。", "仮想通貨はオフラインのデバイスを","持つ本人にしか管理できず。", "ハッキングやセキュリティ侵害に", "脅かされる心配もほとんどありません。", "しかし。", "Cotton氏が亡くなったことで。", "そのコールドウォレットがどんなものでどこに存在して。", "どれだけの額を","保管しているのかがわからないままになってしまったそうです。"]
-
 class VCEditorViewController: NSViewController {
     @IBOutlet weak var collectionView:NSCollectionView!
+    private let viewModel = _VCEditorViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,29 +20,27 @@ class VCEditorViewController: NSViewController {
     }
 }
 
-extension VCEditorViewController: NSCollectionViewDataSource{
+extension VCEditorViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: ._VCEditorTextItemIdentifier, for: indexPath) as! _VCEditorTextItem
-        let data = sampleTexts[indexPath.item]
-        item.setText(data)
+        let data = viewModel.itemData(for: indexPath.item)
+        item.title = data.title
         
         return item
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sampleTexts.count
+        return viewModel.itemCount()
     }
     
-}
-extension VCEditorViewController: NSCollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        if let row = indexPaths.first?.item{
+            viewModel.didSelectRow(at: row)
+        }
+    }
     
-    func collectionView(_ collectionView: NSCollectionView, layout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize{
-        
-        let string = sampleTexts[indexPath.item]
-        let size = NSTextField(labelWithString: string).sizeThatFits(NSSize(width: 400, height: 800))
-        print(size)
-        return size
-        
+    func collectionView(_ collectionView: NSCollectionView, layout: NSCollectionViewLayout, sizeForItemAt index: IndexPath) -> NSSize{
+        return viewModel.itemSize(for: index.item)
     }
 }
 

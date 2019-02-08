@@ -10,6 +10,7 @@ import AppKit
 
 protocol _VCEInspectorViewModelBinder:class {
     func registerNibToTableView(nib:NSNib, for identifier:NSUserInterfaceItemIdentifier)
+    func reloadTableView()
 }
 
 class _VCEInspectorViewModel{
@@ -24,7 +25,7 @@ class _VCEInspectorViewModel{
     }
     
     func cellCount() -> Int{
-        return cellDataModels.count
+        return _cellDataModels.count
     }
     func height(of row:Int) -> CGFloat{
         switch cellDataType(for: row) {
@@ -36,7 +37,7 @@ class _VCEInspectorViewModel{
     }
     
     func cellData(for row:Int) -> _VCEPropertyCellData {
-        return cellDataModels[row]
+        return _cellDataModels[row]
     }
     
     func cellIdentifier(for row:Int) -> NSUserInterfaceItemIdentifier{
@@ -46,21 +47,34 @@ class _VCEInspectorViewModel{
         case .enum  : return _VCEEnumPropertyCell.identifier
         }
     }
+    
     func cellDataType(for row:Int) -> _VCEPropertyCellData.DataType{
-        return cellDataModels[row].cellType
+        return _cellDataModels[row].cellType
+    }
+    
+    private var _cellDataModels:[_VCEPropertyCellData] = []
+    
+    init() {
+        NotificationCenter.default.addObserver(forName: .VCEInspectorManagerChangeInspectingConfig, object: nil, queue: .main){notice in
+            guard let config = notice.object as? VCConfig else {return}
+            self._didCurrentInspectingConfigChange(to: config)
+        }
+    }
+    
+    private func _didCurrentInspectingConfigChange(to config:VCConfig){
+        self._cellDataModels = [
+            _VCEStringPropertyCellData(title: "スクリプト", value: config.text),
+            _VCEEnumPropertyCellData(title: "話者", cases: [""]),
+            _VCENumberPropertyCellData(title: "音量", value: config.volume, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "話速", value: config.speed, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "ピッチ", value: config.pitch, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "抑揚", value: config.range, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "怒り", value: config.anger, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "悲しみ", value: config.sadness, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "喜び", value: config.joy, maxValue: 0.5, minValue: 2.0),
+        ]
+        binder?.reloadTableView()
     }
 }
 
-
-private let cellDataModels:[_VCEPropertyCellData] = [
-    _VCEStringPropertyCellData(title: "スクリプト", value: ""),
-    _VCEEnumPropertyCellData(title: "話者", cases: [""]),
-    _VCENumberPropertyCellData(title: "音量", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "話速", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "ピッチ", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "抑揚", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "怒り", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "悲しみ", value: 1.0, maxValue: 0.5, minValue: 2.0),
-    _VCENumberPropertyCellData(title: "喜び", value: 1.0, maxValue: 0.5, minValue: 2.0),
-]
 

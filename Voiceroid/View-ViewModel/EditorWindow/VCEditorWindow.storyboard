@@ -89,7 +89,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="415" height="524"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="9cs-Kr-yDb">
+                                        <collectionView selectable="YES" id="9cs-Kr-yDb">
                                             <rect key="frame" x="0.0" y="0.0" width="415" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewLayout key="collectionViewLayout" id="JOF-eL-3GX" customClass="_VCCollectionViewLeftAlignedLayout" customModule="Voiceroid" customModuleProvider="target"/>

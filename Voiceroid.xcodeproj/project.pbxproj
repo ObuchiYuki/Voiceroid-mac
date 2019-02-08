@@ -11,6 +11,7 @@
 		B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */; };
 		B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */; };
 		B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234ACCD22054FE6001A1B11 /* VCFileManager.swift */; };
+		B23F03A1220CFBC5001D948F /* _VCEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */; };
 		B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24744FA20528F6F00423131 /* AppDelegate.swift */; };
 		B24744FF20528F6F00423131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24744FE20528F6F00423131 /* Assets.xcassets */; };
 		B247450220528F6F00423131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B247450020528F6F00423131 /* Main.storyboard */; };
@@ -31,9 +32,6 @@
 		B260607F21FC6C150002A6CD /* _VCMainWindowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260607E21FC6C150002A6CD /* _VCMainWindowViewModel.swift */; };
 		B260608121FC6FDA0002A6CD /* VCTextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260608021FC6FDA0002A6CD /* VCTextInputViewController.swift */; };
 		B260608721FD4E190002A6CD /* _VCTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260608621FD4E190002A6CD /* _VCTextInputViewModel.swift */; };
-		B260ADAC220BE9BC00754DC1 /* VCEInspectableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260ADAB220BE9BC00754DC1 /* VCEInspectableObject.swift */; };
-		B260ADAE220BE9DD00754DC1 /* VCEInspectableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260ADAD220BE9DD00754DC1 /* VCEInspectableProperty.swift */; };
-		B260ADB0220BEB8B00754DC1 /* VCEConfigWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260ADAF220BEB8B00754DC1 /* VCEConfigWrapper.swift */; };
 		B268881E21F96A3F00309247 /* VCConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881D21F96A3F00309247 /* VCConfig.swift */; };
 		B268882021F96A5700309247 /* VCSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268881F21F96A5700309247 /* VCSpeaker.swift */; };
 		B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268882121F96AA200309247 /* VCVoiceroid.swift */; };
@@ -62,6 +60,7 @@
 		B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeakerSelectionViewController.swift; sourceTree = "<group>"; };
 		B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPreferenceViewController.swift; sourceTree = "<group>"; };
 		B234ACCD22054FE6001A1B11 /* VCFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
+		B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCEditorViewModel.swift; sourceTree = "<group>"; };
 		B24744F720528F6F00423131 /* Voiceroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voiceroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24744FA20528F6F00423131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B24744FE20528F6F00423131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,9 +84,6 @@
 		B260607E21FC6C150002A6CD /* _VCMainWindowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCMainWindowViewModel.swift; sourceTree = "<group>"; };
 		B260608021FC6FDA0002A6CD /* VCTextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTextInputViewController.swift; sourceTree = "<group>"; };
 		B260608621FD4E190002A6CD /* _VCTextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _VCTextInputViewModel.swift; sourceTree = "<group>"; };
-		B260ADAB220BE9BC00754DC1 /* VCEInspectableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectableObject.swift; sourceTree = "<group>"; };
-		B260ADAD220BE9DD00754DC1 /* VCEInspectableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEInspectableProperty.swift; sourceTree = "<group>"; };
-		B260ADAF220BEB8B00754DC1 /* VCEConfigWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCEConfigWrapper.swift; sourceTree = "<group>"; };
 		B268881D21F96A3F00309247 /* VCConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfig.swift; sourceTree = "<group>"; };
 		B268881F21F96A5700309247 /* VCSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeaker.swift; sourceTree = "<group>"; };
 		B268882121F96AA200309247 /* VCVoiceroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVoiceroid.swift; sourceTree = "<group>"; };
@@ -199,7 +195,6 @@
 			children = (
 				B24CC75D22090E540049B755 /* VCEInspectorViewContorller.swift */,
 				B27D00FE220AA05C0037A010 /* _VCEInspectorViewModel.swift */,
-				B260ADAA220BE9AA00754DC1 /* InspectableObject */,
 				B24CC75F220910860049B755 /* PropertyCells */,
 			);
 			path = Inspector;
@@ -309,16 +304,6 @@
 			path = Paramator;
 			sourceTree = "<group>";
 		};
-		B260ADAA220BE9AA00754DC1 /* InspectableObject */ = {
-			isa = PBXGroup;
-			children = (
-				B260ADAB220BE9BC00754DC1 /* VCEInspectableObject.swift */,
-				B260ADAD220BE9DD00754DC1 /* VCEInspectableProperty.swift */,
-				B260ADAF220BEB8B00754DC1 /* VCEConfigWrapper.swift */,
-			);
-			path = InspectableObject;
-			sourceTree = "<group>";
-		};
 		B268881C21F96A3200309247 /* Voiceroid */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				B29585E02207CA330089A26F /* VCEditorViewController.swift */,
+				B23F03A0220CFBC5001D948F /* _VCEditorViewModel.swift */,
 				B29585E42207CFFD0089A26F /* _VCEditorTextItem.swift */,
 				B29585E52207CFFD0089A26F /* _VCEditorTextItem.xib */,
 				B29585E82207F96D0089A26F /* _VCCollectionViewLeftAlignedLayout.swift */,
@@ -480,7 +466,7 @@
 			files = (
 				B25E06B52200072300334671 /* VCPreferenceWindowController.swift in Sources */,
 				B29585E12207CA330089A26F /* VCEditorViewController.swift in Sources */,
-				B260ADAC220BE9BC00754DC1 /* VCEInspectableObject.swift in Sources */,
+				B23F03A1220CFBC5001D948F /* _VCEditorViewModel.swift in Sources */,
 				B24CC767220912170049B755 /* _VCEEnumPropertyCell.swift in Sources */,
 				B28775E121FDE54300A7C138 /* VCMainMenu.swift in Sources */,
 				B27D00FC220A9FCE0037A010 /* VCEInspectorManager.swift in Sources */,
@@ -489,14 +475,12 @@
 				B260607321FBE3EE0002A6CD /* _VCSpeakerSelectionCell.swift in Sources */,
 				B268882221F96AA200309247 /* VCVoiceroid.swift in Sources */,
 				B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */,
-				B260ADB0220BEB8B00754DC1 /* VCEConfigWrapper.swift in Sources */,
 				B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */,
 				B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */,
 				B208715822043C6E00621580 /* RMDataStore.swift in Sources */,
 				B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */,
 				B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */,
 				B25E06B72200077000334671 /* _VCPreferenceViewModel.swift in Sources */,
-				B260ADAE220BE9DD00754DC1 /* VCEInspectableProperty.swift in Sources */,
 				B24744FB20528F6F00423131 /* AppDelegate.swift in Sources */,
 				B28C60B021FD916E00A4D4AD /* VCParamatorViewController.swift in Sources */,
 				B28C60B221FD917600A4D4AD /* _VCParamatorViewModel.swift in Sources */,

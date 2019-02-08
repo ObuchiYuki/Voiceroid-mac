@@ -14,9 +14,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-n4-nY7">
-                    <rect key="frame" x="2" y="8" width="79" height="14"/>
+                    <rect key="frame" x="2" y="8" width="54" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="75" id="TLj-B5-Qr8"/>
+                        <constraint firstAttribute="width" constant="50" id="TLj-B5-Qr8"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="Q8Q-0Y-fMY">
                         <font key="font" metaFont="smallSystem"/>
@@ -25,7 +25,7 @@
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-XR-f3l">
-                    <rect key="frame" x="81" y="2" width="219" height="25"/>
+                    <rect key="frame" x="56" y="2" width="244" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="CpU-uD-7Kf"/>
                     </constraints>

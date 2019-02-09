@@ -71,7 +71,7 @@ extension VCConfig: RMStorable {}
 
 /// コンフィグの内容のenumです。全て中身はDoubleです。
 /// ほら、数多いし...
-enum VCConfigParamatorKey:CaseIterable {
+enum VCConfigParamatorKey:String, CaseIterable {
     case volume
     case speed
     case pitch

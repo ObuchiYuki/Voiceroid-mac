@@ -22,10 +22,12 @@ class _VCEPropertyCellData {
     }
     let cellType:DataType
     let title:String
+    let cellIdentifier:String
     
-    init(cellType:_VCEPropertyCellData.DataType ,title:String) {
+    init(cellType:_VCEPropertyCellData.DataType ,title:String, identifier:String) {
         self.cellType = cellType
         self.title = title
+        self.cellIdentifier = identifier
     }
 }
 
@@ -34,12 +36,12 @@ class _VCENumberPropertyCellData: _VCEPropertyCellData {
     var maxValue:Double
     var minValue:Double
     
-    init(title:String, value:Double, maxValue:Double, minValue:Double) {
+    init(title:String,identifier:String, value:Double, maxValue:Double, minValue:Double) {
         self.value = value
         self.maxValue = maxValue
         self.minValue = minValue
         
-        super.init(cellType: .number, title:title)
+        super.init(cellType: .number, title:title, identifier:identifier)
     }
 }
 
@@ -50,21 +52,21 @@ class _VCEStringPropertyCellData: _VCEPropertyCellData {
     ///デフォルトで`false`です。
     var useSingleLineInput:Bool
     
-    init(title:String, value:String, useSingleLineInput:Bool=false) {
+    init(title:String,identifier:String, value:String, useSingleLineInput:Bool=false) {
         self.value = value
         self.useSingleLineInput = useSingleLineInput
         
-        super.init(cellType: .string, title:title)
+        super.init(cellType: .string, title:title, identifier:identifier)
     }
 }
 
 class _VCEEnumPropertyCellData: _VCEPropertyCellData {
     var cases:[String]
     
-    init(title:String, cases:[String]) {
+    init(title:String,identifier:String, cases:[String]) {
         self.cases = cases
         
-        super.init(cellType: .enum, title:title)
+        super.init(cellType: .enum, title:title,identifier:identifier)
     }
 }
 

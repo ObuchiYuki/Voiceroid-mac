@@ -20,9 +20,9 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-9A-dn3">
                     <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" drawsBackground="YES" id="fUS-Y2-x0O">
+                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" title="Label" drawsBackground="YES" id="fUS-Y2-x0O">
                         <font key="font" usesAppearanceFont="YES"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" red="1" green="0.3803921569" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </textFieldCell>
                 </textField>
@@ -33,6 +33,12 @@
                 <constraint firstAttribute="trailing" secondItem="7sb-9A-dn3" secondAttribute="trailing" id="HpG-r2-R7Y"/>
                 <constraint firstAttribute="bottom" secondItem="7sb-9A-dn3" secondAttribute="bottom" id="cy1-7R-rlu"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-36" y="227.5"/>
         </customView>
         <collectionViewItem id="x6M-gd-7x3" customClass="_VCEditorTextItem" customModule="Voiceroid" customModuleProvider="target"/>

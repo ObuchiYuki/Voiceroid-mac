@@ -40,7 +40,10 @@ class _VCEInspectorViewModel{
         return _cellDataModels[row]
     }
     
-    func cellIdentifier(for row:Int) -> NSUserInterfaceItemIdentifier{
+    func cellIdentifier(for row:Int) -> String{
+        return _cellDataModels[row].cellIdentifier
+    }
+    func cellTypeIdentifier(for row:Int) -> NSUserInterfaceItemIdentifier{
         switch cellDataType(for: row) {
         case .number: return _VCENumberPropertyCell.identifier
         case .string: return _VCEStringPropertyCell.identifier
@@ -57,23 +60,40 @@ class _VCEInspectorViewModel{
     init() {
         NotificationCenter.default.addObserver(forName: .VCEInspectorManagerChangeInspectingConfig, object: nil, queue: .main){notice in
             guard let config = notice.object as? VCConfig else {return}
-            self._didCurrentInspectingConfigChange(to: config)
+            
+            self._didCurrentInspectingConfigChanged(to: config)
+        }
+        
+        NotificationCenter.default.addObserver(forName: ._VCENumberPropertyCellDidChangeValue, object: nil, queue: .main){notice in
+            guard let cell = notice.object as? _VCENumberPropertyCell else {return}
+            
+            self._didInspectingNumberPropertyChanged(to: cell.value, for: cell.cellIdentifier)
         }
     }
-    
-    private func _didCurrentInspectingConfigChange(to config:VCConfig){
+    private func _didInspectingNumberPropertyChanged(to value:Double, for cellIdentifier:String){
+        guard let configKey = _convertCellIdentifierToConfigKey(cellIdentifier) else {return}
+        
+        VCEInspectorManager.default.setParamator(value, for: configKey)
+    }
+    private func _didCurrentInspectingConfigChanged(to config:VCConfig){
         self._cellDataModels = [
-            _VCEStringPropertyCellData(title: "スクリプト", value: config.text),
-            _VCEEnumPropertyCellData(title: "話者", cases: [""]),
-            _VCENumberPropertyCellData(title: "音量", value: config.volume, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "話速", value: config.speed, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "ピッチ", value: config.pitch, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "抑揚", value: config.range, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "怒り", value: config.anger, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "悲しみ", value: config.sadness, maxValue: 0.5, minValue: 2.0),
-            _VCENumberPropertyCellData(title: "喜び", value: config.joy, maxValue: 0.5, minValue: 2.0),
+            _VCEStringPropertyCellData(title: "スクリプト", identifier:"vce.title", value: config.text),
+            _VCEEnumPropertyCellData  (title: "話者",   identifier:"vce.speaker", cases: [""]),
+            _VCENumberPropertyCellData(title: "音量",   identifier:VCConfigParamatorKey.volume.rawValue, value: config.volume, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "話速",   identifier:VCConfigParamatorKey.speed.rawValue, value: config.speed, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "ピッチ",  identifier:VCConfigParamatorKey.pitch.rawValue, value: config.pitch, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "抑揚",   identifier:VCConfigParamatorKey.range.rawValue, value: config.range, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "怒り",   identifier:VCConfigParamatorKey.anger.rawValue, value: config.anger, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "悲しみ",  identifier:VCConfigParamatorKey.sadness.rawValue, value: config.sadness, maxValue: 0.5, minValue: 2.0),
+            _VCENumberPropertyCellData(title: "喜び",   identifier:VCConfigParamatorKey.joy.rawValue, value: config.joy, maxValue: 0.5, minValue: 2.0),
         ]
         binder?.reloadTableView()
+    }
+    private func _convertConfigKeyToCellIdentifier(_ configKey:VCConfigParamatorKey) -> String{
+        return configKey.rawValue
+    }
+    private func _convertCellIdentifierToConfigKey(_ cellIdentifier:String) -> VCConfigParamatorKey?{
+        return VCConfigParamatorKey(rawValue: cellIdentifier)
     }
 }
 

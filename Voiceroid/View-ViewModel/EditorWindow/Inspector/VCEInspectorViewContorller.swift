@@ -10,10 +10,12 @@ import AppKit
 
 class VCEInspectorViewContorller: NSViewController {
     @IBOutlet private weak var tableView:NSTableView!
+    
     private let viewModel = _VCEInspectorViewModel()
     
     override func viewDidLoad() {
         viewModel.viewDidLoad(self)
+        
     }
 }
 
@@ -28,12 +30,12 @@ extension VCEInspectorViewContorller: _VCEInspectorViewModelBinder{
 
 extension VCEInspectorViewContorller: NSTableViewDataSource{
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let identifier = viewModel.cellIdentifier(for: row)
+        let typeIdentifier = viewModel.cellTypeIdentifier(for: row)
         let data = viewModel.cellData(for: row)
-        guard let cell = tableView.makeView(withIdentifier: identifier, owner: self) as? _VCEPropertyCell else {return nil}
+        guard let cell = tableView.makeView(withIdentifier: typeIdentifier, owner: self) as? _VCEPropertyCell else {return nil}
         
         cell.title = data.title
-        
+        cell.cellIdentifier = data.cellIdentifier
         
         switch viewModel.cellDataType(for: row) {
         case .string:

@@ -13,10 +13,16 @@ class VCEditorViewController: NSViewController {
     private let viewModel = _VCEditorViewModel()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        viewModel.viewDidLoad(self)
         
         let nib = NSNib(nibNamed: ._VCEditorTextItemNibName, bundle: .main)
         collectionView.register(nib, forItemWithIdentifier: ._VCEditorTextItemIdentifier)
+    }
+}
+
+extension VCEditorViewController:_VCEditorViewModelBinder{
+    func reloadItem(at index: Int) {
+        collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
     }
 }
 

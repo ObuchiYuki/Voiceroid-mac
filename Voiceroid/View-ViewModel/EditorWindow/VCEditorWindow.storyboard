@@ -101,8 +101,9 @@
                                         </collectionView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="x1C-6C-Opa">
-                                    <rect key="frame" x="1" y="507" width="413" height="16"/>
+                                <edgeInsets key="contentInsets" left="5" right="5" top="5" bottom="5"/>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="x1C-6C-Opa">
+                                    <rect key="frame" x="5" y="503" width="405" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="47v-DF-K3u">

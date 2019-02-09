@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B208715822043C6E00621580 /* RMDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208715722043C6E00621580 /* RMDataStore.swift */; };
+		B208715822043C6E00621580 /* RMStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208715722043C6E00621580 /* RMStorage.swift */; };
 		B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */; };
 		B21B2C1622053C5A0090A601 /* VCPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */; };
 		B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234ACCD22054FE6001A1B11 /* VCFileManager.swift */; };
@@ -56,7 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B208715722043C6E00621580 /* RMDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMDataStore.swift; sourceTree = "<group>"; };
+		B208715722043C6E00621580 /* RMStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMStorage.swift; sourceTree = "<group>"; };
 		B20BEF7D21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpeakerSelectionViewController.swift; sourceTree = "<group>"; };
 		B21B2C1522053C5A0090A601 /* VCPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPreferenceViewController.swift; sourceTree = "<group>"; };
 		B234ACCD22054FE6001A1B11 /* VCFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
@@ -118,12 +118,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B208715622043C0800621580 /* common */ = {
+		B208715622043C0800621580 /* RMKit */ = {
 			isa = PBXGroup;
 			children = (
-				B208715722043C6E00621580 /* RMDataStore.swift */,
+				B208715722043C6E00621580 /* RMStorage.swift */,
 			);
-			path = common;
+			path = RMKit;
 			sourceTree = "<group>";
 		};
 		B24744EE20528F6F00423131 = {
@@ -147,7 +147,7 @@
 			children = (
 				B247450320528F6F00423131 /* Info.plist */,
 				B24744FA20528F6F00423131 /* AppDelegate.swift */,
-				B208715622043C0800621580 /* common */,
+				B208715622043C0800621580 /* RMKit */,
 				B2F549BA2055F4B0009ABF56 /* Doc */,
 				B2F549B92055F4A3009ABF56 /* Sys */,
 				B260607621FBE94A0002A6CD /* Manager */,
@@ -477,7 +477,7 @@
 				B234ACCE22054FE6001A1B11 /* VCFileManager.swift in Sources */,
 				B20BEF7E21FB0CD3007C71EC /* VCSpeakerSelectionViewController.swift in Sources */,
 				B27D00FF220AA05C0037A010 /* _VCEInspectorViewModel.swift in Sources */,
-				B208715822043C6E00621580 /* RMDataStore.swift in Sources */,
+				B208715822043C6E00621580 /* RMStorage.swift in Sources */,
 				B29585E62207CFFD0089A26F /* _VCEditorTextItem.swift in Sources */,
 				B260607821FC60AC0002A6CD /* VCConfigManager.swift in Sources */,
 				B25E06B72200077000334671 /* _VCPreferenceViewModel.swift in Sources */,

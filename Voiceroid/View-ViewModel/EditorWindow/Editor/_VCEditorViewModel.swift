@@ -8,10 +8,21 @@
 
 import AppKit
 
+
+protocol _VCEditorViewModelBinder:class {
+    func reloadItem(at index:Int)
+}
 class _VCEditorViewModel {
+    private weak var binder:_VCEditorViewModelBinder?
+    private var _selectedRowIndex:Int?
+    
+    func viewDidLoad(_ binder:_VCEditorViewModelBinder){
+        self.binder = binder
+    }
+    
     func didSelectRow(at index:Int){
-        print(index)
-        VCEInspectorManager.default.currentInspectingConfig = sampleTexts[index].config
+        _selectedRowIndex = index
+        VCEInspectorManager.default.setInspectingConfig(sampleTexts[index].config)
     }
     func itemSize(for row:Int) -> NSSize{
         let string = sampleTexts[row].title
@@ -24,26 +35,43 @@ class _VCEditorViewModel {
     func itemData(for row:Int) -> _VCEditorViewTextItemData{
         return sampleTexts[row]
     }
+    
+    init() {
+        NotificationCenter.default.addObserver(forName: .VCEInspectorManagerChangeConfigValue, object: nil, queue: .main){notice in
+            guard let config = notice.object as? VCConfig else {return}
+            self._didInspectingConfigValueChange(to: config)
+        }
+    }
+    
+    private func _didInspectingConfigValueChange(to config:VCConfig){
+        guard let selectedRowIndex = self._selectedRowIndex else {return}
+        
+        sampleTexts[selectedRowIndex].config = config
+        print(sampleTexts[selectedRowIndex])
+        binder?.reloadItem(at: selectedRowIndex)
+    }
 }
 
 struct _VCEditorViewTextItemData {
-    let title:String
-    let config:VCConfig
+    var title:String{
+        return self.config.text
+    }
+    var config:VCConfig
 }
 
 
-let sampleTexts = [
-    _VCEditorViewTextItemData(title: "コールドウォレットとは。", config:VCConfig(text: "コールドウォレットとは。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "仮想通貨をインターネットに接続しない", config:VCConfig(text: "仮想通貨をインターネットに接続しない", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "物理デバイスで保管するもの。", config:VCConfig(text: "物理デバイスで保管するもの。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "コールドウォレットを使うことで。", config:VCConfig(text: "コールドウォレットを使うことで。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "仮想通貨はオフラインのデバイスを", config:VCConfig(text: "仮想通貨はオフラインのデバイスを", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "持つ本人にしか管理できず。", config:VCConfig(text: "持つ本人にしか管理できず。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "ハッキングやセキュリティ侵害に", config:VCConfig(text: "ハッキングやセキュリティ侵害に", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "脅かされる心配もほとんどありません。", config:VCConfig(text: "脅かされる心配もほとんどありません。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "しかし。", config:VCConfig(text: "しかし。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "Cotton氏が亡くなったことで。", config:VCConfig(text: "Cotton氏が亡くなったことで。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "そのコールドウォレットがどんなものでどこに存在して。", config:VCConfig(text: "そのコールドウォレットがどんなものでどこに存在して。", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "どれだけの額を", config:VCConfig(text: "どれだけの額を", speaker: .yukari)),
-    _VCEditorViewTextItemData(title: "保管しているのかがわからないままになってしまったそうです。", config:VCConfig(text: "保管しているのかがわからないままになってしまったそうです。", speaker: .yukari)),
+var sampleTexts = [
+    _VCEditorViewTextItemData(config:VCConfig(text: "コールドウォレットとは。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "仮想通貨をインターネットに接続しない", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "物理デバイスで保管するもの。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "コールドウォレットを使うことで。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "仮想通貨はオフラインのデバイスを", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "持つ本人にしか管理できず。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "ハッキングやセキュリティ侵害に", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "脅かされる心配もほとんどありません。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "しかし。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "Cotton氏が亡くなったことで。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "そのコールドウォレットがどんなものでどこに存在して。", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "どれだけの額を", speaker: .yukari)),
+    _VCEditorViewTextItemData(config:VCConfig(text: "保管しているのかがわからないままになってしまったそうです。", speaker: .yukari)),
 ]

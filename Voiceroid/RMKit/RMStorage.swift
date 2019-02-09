@@ -57,7 +57,7 @@ class RMStorage{
     /// ---- RMStorage Methods ----
     
     /// 引数`value`に与えられた値を保存します。
-    /// 実態は`$HOME/Library/Application Support/(Bundle Name)/userdata/(Key Identifier).plist`
+    /// 実体は`$HOME/Library/Application Support/(Bundle Name)/userdata/(Key Identifier).plist`
     /// に保存されます。
     func store<T: RMStorable>(_ value:T, for key: RMStorage.Key<T>){
         let data = try! PropertyListEncoder().encode(_RMStorableWrapper(value: value))
@@ -89,7 +89,7 @@ class RMStorage{
     /// ===========================================
     /// ---- RMStorage Private Methods ----
     
-    /// `Key`をもとに実態を保存する場所を返します。
+    /// `Key`をもとに実体を保存する場所を返します。
     /// `$HOME/Library/Application Support/(Bundle Name)/userdata/(Key Identifier).plist`です。
     private func _storePath<T: RMStorable>(for key:RMStorage.Key<T>) -> String?{
         guard let appSupportUrl = _createAppSupportUrl() else {return nil}
